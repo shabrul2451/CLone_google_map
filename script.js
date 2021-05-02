@@ -1,5 +1,5 @@
-mapboxgl.accessToken =
-  "pk.eyJ1Ijoid2ViZGV2c2ltcGxpZmllZCIsImEiOiJja2d1c2x2djAwODE1MnltaGNzeHljcWN4In0.4u6YymF-wOIYpDoUTMcNOQ"
+mapboxgl.accessToken = "pk.eyJ1Ijoic2hhYnJ1bDI0NTEiLCJhIjoiY2tvNjU5dm9lMHdoMjJvczc2ejh5dm9nYiJ9.wySHzN2GivcJhzhPdlLlQQ"
+
 
 navigator.geolocation.getCurrentPosition(successLocation, errorLocation, {
   enableHighAccuracy: true
@@ -7,6 +7,9 @@ navigator.geolocation.getCurrentPosition(successLocation, errorLocation, {
 
 function successLocation(position) {
   setupMap([position.coords.longitude, position.coords.latitude])
+  add.addEventListener('click', () => {
+    console.log(position);
+  })
 }
 
 function errorLocation() {
@@ -30,3 +33,6 @@ function setupMap(center) {
 
   map.addControl(directions, "top-left")
 }
+
+const add = document.querySelector(".fav");
+
