@@ -1,0 +1,86 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#map {
+  height: 100vh;
+  width: 80vw;
+  overflow-y: hidden;
+}
+
+#fevAddress {
+  height: 100vh;
+  width: 20vw;
+  background-color: rgb(237, 242, 247);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 10px;
+  overflow-y: scroll;
+}
+
+.main-container {
+  display: flex;
+}
+.card {
+  width: 90%;
+  height: 100px;
+  background-color: whitesmoke;
+  color: gray;
+  border-radius: 8px;
+  margin-top: 10px;
+  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.02),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.028), 0 12.5px 10px rgba(0, 0, 0, 0.035),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.042), 0 41.8px 33.4px rgba(0, 0, 0, 0.05),
+    0 100px 80px rgba(0, 0, 0, 0.07);
+  border-top: 5px solid rgb(220, 20, 60);
+  margin-bottom: 10px;
+}
+
+.latitude,
+.longitude {
+  margin-left: 10px;
+  margin-top: 10px;
+  color: #818181;
+  font-size: 18px;
+}
+
+.fevAddress-title {
+  color: rgb(16, 92, 185);
+}
+
+.card-title {
+  margin: 10px 0px;
+  text-align: center;
+  color: crimson;
+  font-weight: bold;
+}
+
+.distance-container {
+  position: absolute;
+  top: 10px;
+  left: 47%;
+  z-index: 1;
+}
+
+.distance-container > * {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  font-size: 11px;
+  line-height: 18px;
+  display: block;
+  margin: 0;
+  padding: 5px 10px;
+  border-radius: 3px;
+}
+
+.mapboxgl-ctrl-geocoder--icon-search {
+  display: none !important;
+}
+
+@media screen and (min-width: 640px) {
+  .mapboxgl-ctrl-geocoder {
+    width: 100% !important;
+  }
+}
